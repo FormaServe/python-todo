@@ -26,14 +26,24 @@ This repository showcases FormaServe’s training capabilities and provides a si
 ## Install dependencies
 
 ```bash
-npm install
+pip install bottle
+
+```
+
+## Create the SQLite Database
+
+```python3
+python create-db.py
 ```
 
 ## Start the TODO app
 
 ```bash
-npm start
+python index.py
 ```
+
+Then in an internet browser, open the application at the following URL
+http://localhost:8080/
 
 ## Virtual Environment
 

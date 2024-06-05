@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo</title>
+  <title>FormaServe: ToDo</title>
   <link rel="stylesheet" type="text/css" href="/static/style.css">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <script src="https://kit.fontawesome.com/7e02145d4d.js" crossorigin="anonymous"></script>
+  <!-- Poppins Font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>

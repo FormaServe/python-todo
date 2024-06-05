@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Set a nice font family (Poppins) for the entire app */
@@ -36,16 +37,6 @@ h2 {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Input field for adding tasks */
-.input-task {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
 }
 
 /* Table to display tasks */
@@ -86,23 +77,6 @@ h2 {
   background-color: #0056b3;
   color: #fff;
 }
-
-/* Styling for the "Add" button */
-/* .add-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 10px 10px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 7px;
-  transition: background-color 0.3s ease;
-} */
-
-/* Hover effect: Darken the button color */
-/* .add-button:hover {
-  background-color: #45a049;
-} */
 
 /* Responsive adjustments */
 @media screen and (max-width: 480px) {
@@ -154,17 +128,6 @@ h2 {
   border-left: thick solid #fa0404;
 }
 
-/* Style the search field */
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-  border-radius: 12px;
-}
-
 /* Style the submit button */
 form.example button {
   float: left;
@@ -200,4 +163,27 @@ form.example::after {
 
 .text-right {
   text-align: right;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  margin-left: 50px;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

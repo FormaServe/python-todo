@@ -95,7 +95,8 @@ def show_item(item):
 
 @route('/help')
 def help():
-    template('todo-help')
+    # Serve the 'help.html' file from the 'static' directory
+    return static_file('help.html', root='./static')
 
 
 @route('/json<json:re:[0-9]+>')
