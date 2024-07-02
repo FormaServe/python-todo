@@ -66,7 +66,7 @@ def new():
         conn.close()
         return '<h3>The new task was inserted into the database, the ID is %s</h3>' % new_id
     else:
-        return template('todo-new')
+        return template('./views/todo-new')
 
 
 @route('/edit/<no:int>', method='GET')
@@ -100,7 +100,7 @@ def edit_item(no):
         c.execute("SELECT task FROM todo WHERE id LIKE ?", (str(no)))
         cur_data = c.fetchone()
 
-    return template('todo-edit', old=cur_data, no=no)
+    return template('./views/todo-edit', old=cur_data, no=no)
 
 
 @route('/delete/<no:int>', method='GET')
@@ -163,5 +163,5 @@ def mistake404(code):
     return 'Sorry, this page does not exist!'
 
 
-# start the server http://localhost:8080
-run(host='localhost', port=8080, debug=True, reloader=True)
+# start the server http://0.0.0.0:3637
+run(host='0.0.0.0', port=3637, debug=True, reloader=True)

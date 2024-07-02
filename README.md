@@ -33,7 +33,9 @@ pip install bottle
 
 ## Create the SQLite Database
 
-```python3
+If you do not want to use our version of the database, delete the todo.db and recreate it using the command below.
+
+```bash
 python create-db.py
 
 ```
