@@ -6,21 +6,18 @@ This repository showcases FormaServe’s training capabilities and provides a si
 
 ## Features
 
-* Add, edit, and delete TODO items
+* Add, update & delete TODO items
 * Mark items as completed
-* Cross-platform compatibility, can run on the IBM i Power server
+* Cross-platform compatibility. Can run on the IBM i Power servers.
 
 ## Installation
 
-* Clone this repository to your local machine
-* Install the necessary dependencies (e.g., Python, etc.)
-* Run the application using the provided scripts
+Clone this repository to your local machine
 
-## Usage
+```bash
+git clone https://github.com/FormaServe/python-todo
 
-* Open a terminal or command prompt
-* Clone this repository
-* Navigate to the project directory
+```
 
 Before installing dependancies, it is recommended to use virtual environments to install and run this application.  See Virtual Environments section if you are unsure to use virtual environments.
 
@@ -33,7 +30,7 @@ pip install bottle
 
 ## Create the SQLite Database
 
-If you do not want to use our version of the database, delete the todo.db and recreate it using the command below.
+If you do not want to use our version of the database, delete the file todo.db & recreate it using the python below.
 
 ```bash
 python create-db.py
@@ -65,7 +62,7 @@ Replace .venv with your preferred name for the virtual environment if you do not
 
 ### Activate the Virtual Environment
 
-To activate the virtual environment, use the appropriate command based on your operating system:\
+To activate the virtual environment, use the appropriate command based on your operating system:
 
 #### On Windows
 
@@ -93,7 +90,7 @@ Remember to activate it whenever you work on your project. 😊
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Authors
 

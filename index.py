@@ -3,7 +3,7 @@
 
  Main index file for the TODO training application.
 
- To install follow the instructions in the readme file and make note of the licensing requirements.
+ To install, follow the instructions in the readme file and make note of the licensing requirements.
 
  For full disclaimer see https://www.formaserve.co.uk/examples.php
 
@@ -22,7 +22,7 @@ from bottle import route, debug, run, template, static_file, error, request
 @route('/static/<filename>')
 def server_static(filename):
     '''
-    create static file routes, used for CSS and static HTML
+    create static file routes, used for CSS & static HTML
     '''
     return static_file(filename, root='./static')
 
