@@ -1,24 +1,44 @@
+'''
+ FormaServe IBM i Training
 
+ Main index file for the TODO training application.
+
+ To install follow the instructions in the readme file and make note of the licensing requirements.
+
+ For full disclaimer see https://www.formaserve.co.uk/examples.php
+
+ © - FormaServe Systems Ltd.  1990 - 2024
+
+ www.FormaServe.co.uk
+ powerwire.eu
+
+'''
+
+# imports
 import sqlite3
 from bottle import route, debug, run, template, static_file, error, request
-
-# create static file routes
 
 
 @route('/static/<filename>')
 def server_static(filename):
+    '''
+    create static file routes, used for CSS and static HTML
+    '''
     return static_file(filename, root='./static')
-
-# show all entries
 
 
 @route('/')
-@route('/todo')
 @route('/index')
 def todo_list():
+    '''
+    Main index
+
+    show all TODO entries
+    '''
 
     conn = sqlite3.connect('todo.db')
     c = conn.cursor()
+
     sql = "SELECT id, task, CASE WHEN status = 1 THEN 'Open' ELSE 'Closed' END AS status_description FROM todo;"
 
     c.execute(sql)
@@ -29,11 +49,12 @@ def todo_list():
 
     return output
 
-# add new entries
-
 
 @route('/new', method='GET')
 def new():
+    '''
+    Create new TODO entry
+    '''
 
     if request.GET.save:
         new = request.GET.task.strip()
@@ -50,12 +71,15 @@ def new():
 
 @route('/edit/<no:int>', method='GET')
 def edit_item(no):
+    '''
+    edit an existing TODO item
+    '''
 
     if request.GET.save:
         edit = request.GET.task.strip()
         status = request.GET.status.strip()
 
-        if status == 'open':
+        if status == 'Open':
             # change status value to 1
             status = 1
             # else make the status value 0.
@@ -77,6 +101,20 @@ def edit_item(no):
         cur_data = c.fetchone()
 
     return template('todo-edit', old=cur_data, no=no)
+
+
+@route('/delete/<no:int>', method='GET')
+def delete_item(no):
+    '''
+    delete a todo item
+    '''
+
+    conn = sqlite3.connect('todo.db')
+    c = conn.cursor()
+    c.execute("DELETE from todo WHERE id LIKE ?", (str(no)))
+    conn.commit()
+
+    return '<h3>The item number %s was successfully deleted!</h3>' % no
 
 
 @route('/item<item:re:[0-9]+>')

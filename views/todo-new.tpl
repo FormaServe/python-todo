@@ -7,7 +7,7 @@
     <title>FormaServe: ToDo</title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://kit.fontawesome.com/7e02145d4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -17,8 +17,16 @@
 
         <form action="/new" method="GET">
             <input type="text" id="task" name="task" placeholder="Enter your todo item..." required>
+            <select id="status">
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+              </select>
             <br><br><br>
-            <input class="add-button" type="submit" name="save" value="Save">
+            <button class="add-button" type="submit">
+                <i class="fa-solid fa-floppy-disk"></i>&nbsp;&nbsp;Save
+            </button>
+            <a href="help" class="help-button"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Help</a>
+            <a href="/" class="back-button"><i class="fa-solid fa-skull-crossbones"></i>&nbsp;&nbsp;Back</a>
         </form>
 
     </div>

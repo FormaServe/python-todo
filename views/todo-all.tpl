@@ -7,14 +7,14 @@
   <title>FormaServe: ToDo</title>
   <link rel="stylesheet" type="text/css" href="/static/style.css">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-  <script src="https://kit.fontawesome.com/7e02145d4d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Poppins Font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <h1><i class="fa-regular fa-calendar-days"></i> TODO Application: All Items</h1>
+    <h1><i class="fa-regular fa-calendar-days"></i>&nbsp;&nbsp;TODO Application: All Items</h1>
     <table class="styled-table">
       <thead>
         <tr>
@@ -39,7 +39,7 @@
     </table>
 
     <a href="new" class="add-button"><i class="fa-regular fa-square-plus"></i>&nbsp;&nbsp;New Task</a>
-    <a href="help" class="add-button"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Help</a>
+    <a href="help" class="help-button"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;Help</a>
 
   </div>
 </body>
