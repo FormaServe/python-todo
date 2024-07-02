@@ -47,7 +47,9 @@ Then in an internet browser, open the application at the following URL http://lo
 
 ## Virtual Environment
 
-As with all python projects, it is recommended to run this application in a virtual environment.  Follow the instructions below to get started./
+As with all python projects, it is recommended to run this application in a virtual environment.
+
+Follow the instructions below to get started.
 
 ### Create the Virtual Environment
 
